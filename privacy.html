@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Lab Server handles Gmail authorization, operational monitoring information, and notification delivery data.">
+  <title>Privacy policy — Lab Server</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="./">LAB SERVER</a>
+    <nav aria-label="Main navigation">
+      <a href="./">Overview</a>
+      <a href="privacy.html" aria-current="page">Privacy policy</a>
+      <a href="terms.html">Terms of service</a>
+    </nav>
+  </header>
+  <main class="wrap" id="main">
+    <h1>Privacy policy</h1>
+    <p class="meta">Effective October 18, 2026</p>
+    <p>Lab Server is a personal monitoring application operated by Colin Lease for his own systems. This policy describes its use of Google services, its monitoring records, and this public information site.</p>
+    <h2>Google access and its purpose</h2>
+    <p>When authorized and enabled by its owner, Lab Server requests only <code>https://www.googleapis.com/auth/gmail.send</code>. It uses that permission to send server alerts, recovery notices, reminders, and daily summaries from the owner's authorized Gmail account to the owner's configured recipient address.</p>
+    <p>The application does not request permission to read existing email, search a mailbox, manage contacts, or access Google Drive. Information about backup health comes from operational monitoring on the server, rather than access to backup contents through Google's APIs.</p>
+    <h2>Information processed</h2>
+    <ul>
+      <li><strong>Authorization information:</strong> an OAuth client ID, client secret, refresh token, and short-lived access tokens needed to submit email.</li>
+      <li><strong>Notification information:</strong> the configured sender and recipient, email subject and body, and Gmail submission identifiers returned after sending.</li>
+      <li><strong>Monitoring information:</strong> service health summaries, heartbeat times, job and backup status, update counts, incident history, and delivery status or bounded error codes.</li>
+    </ul>
+    <p>Monitoring reports are designed to summarize operational conditions. They do not include accounting records, backup file contents, or raw application log messages.</p>
+    <h2>Storage and service providers</h2>
+    <p>OAuth credentials are stored in encrypted Cloudflare Worker secrets. Temporary access tokens are used in memory. Monitoring records, queued notification contents, and delivery metadata are stored in Cloudflare D1. The server maintains its own local report queue.</p>
+    <p>Google processes message contents and addressing information to provide Gmail delivery. Cloudflare processes the monitoring and delivery data needed to operate the application. GitHub hosts these public information pages. These providers may process data in different countries under their applicable service terms and privacy policies.</p>
+    <h2>Use and sharing</h2>
+    <p>Information is used to authorize email delivery, notify the owner, manage retries, avoid duplicate notifications, and investigate operational or security problems. It is shared with the relevant service providers for those purposes and may be disclosed if required by law.</p>
+    <p>Google user data is not sold, used for advertising or profiling, or provided to AI models. Lab Server's handling of Google API data follows the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+    <h2>Retention and deletion</h2>
+    <p>When monitoring is enabled, accepted local reports are normally removed after seven days. Normal sent or cancelled cloud notification history is retained for 30 days. Resolved incidents without retained notifications can be removed after 90 days. Unprocessed events, unresolved incidents, and uncertain or blocked delivery records can be kept longer for investigation and reconciliation. Cloud housekeeping runs when monitoring is enabled.</p>
+    <p>Gmail's copies of sent or received messages remain subject to the relevant account's settings and deletion controls. Removing application records does not remove messages from Gmail or immediately erase provider backups.</p>
+    <p>The owner can revoke Google access through <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revocation stops future use of that authorization; existing application records must be deleted separately. Contact the operator to request deletion of stored application data or credentials.</p>
+    <h2>This public website</h2>
+    <p>These pages do not contain forms, analytics scripts, advertising, or application tracking cookies. GitHub may collect ordinary web request information, including IP addresses and browser details, to host and secure GitHub Pages. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+    <h2>Changes and contact</h2>
+    <p>Changes to these practices will be reflected on this page with an updated effective date. Additional Google permissions or materially different uses require an updated disclosure and appropriate authorization.</p>
+    <p>Questions or deletion requests: <a href="mailto:noreply.colinlease@gmail.com">noreply.colinlease@gmail.com</a>.</p>
+  </main>
+  <footer class="wrap">
+    <p>Lab Server · Personal server monitoring</p>
+    <p><a href="./">Overview</a> · <a href="terms.html">Terms of service</a></p>
+  </footer>
+</body>
+</html>

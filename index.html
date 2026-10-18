@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lab Server is a personal server monitoring application that sends operational alerts and daily summaries to its owner.">
+  <title>Lab Server — Personal server monitoring</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="./">LAB SERVER</a>
+    <nav aria-label="Main navigation">
+      <a href="./" aria-current="page">Overview</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms of service</a>
+    </nav>
+  </header>
+  <main class="wrap" id="main">
+    <h1>Lab Server</h1>
+    <p class="intro">Personal server monitoring, with useful alerts delivered by email.</p>
+    <p>Lab Server helps its owner keep track of server availability, running services and background jobs, backup health, and available system updates.</p>
+    <h2>What it does</h2>
+    <ul>
+      <li>Checks for a missing server heartbeat from an independent monitoring service.</li>
+      <li>Reports operational failures and subsequent recoveries.</li>
+      <li>Provides a daily summary of outstanding issues and available updates.</li>
+    </ul>
+    <h2>Why it connects to Google</h2>
+    <p>When enabled, Lab Server uses the Gmail API to send these notifications from its owner's authorized Gmail account to the owner's configured email address. It requests the <code>gmail.send</code> permission for that purpose.</p>
+    <p>This permission does not allow Lab Server to read the owner's inbox, browse existing messages, or access Google Drive files. Read the <a href="privacy.html">privacy policy</a> for how authorization, notifications, and monitoring data are handled.</p>
+    <div class="note">
+      <p><strong>Personal use.</strong> Lab Server is operated for its owner's systems. This public site provides application information and policies; the monitoring application has no public account registration.</p>
+    </div>
+    <h2>Contact</h2>
+    <p>For questions about the application or its Google authorization, contact <a href="mailto:noreply.colinlease@gmail.com">noreply.colinlease@gmail.com</a>.</p>
+  </main>
+  <footer class="wrap">
+    <p>Lab Server · Personal server monitoring</p>
+    <p><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of service</a></p>
+  </footer>
+</body>
+</html>
