@@ -16,7 +16,7 @@ body {
 }
 .wrap { width: min(100% - 40px, 800px); margin: 0 auto; }
 header { padding: 34px 0 22px; }
-.brand { color: var(--accent); font-size: 14px; font-weight: 750; letter-spacing: .15em; text-decoration: none; }
+.brand { color: var(--accent); font-size: 17px; font-weight: 750; letter-spacing: .15em; text-decoration: none; }
 nav { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 16px; font-size: 15px; }
 a { color: #345f7b; text-underline-offset: .2em; overflow-wrap: anywhere; }
 a:hover { color: #173d56; }
